@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{EA691718-F2E2-4E48-807F-34F57C6CB805}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Buyer.cs">
+    <Files>
+      <File FileName="Program.cs" Line="6" Column="6" />
+      <File FileName="Product.cs" Line="1" Column="1" />
+      <File FileName="Seller.cs" Line="1" Column="1" />
+      <File FileName="Shop.cs" Line="1" Column="1" />
+      <File FileName="Person.cs" Line="1" Column="1" />
+      <File FileName="Meat.cs" Line="1" Column="1" />
+      <File FileName="IThing.cs" Line="1" Column="1" />
+      <File FileName="Buyer.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab_2_zadanie" expanded="True">
+            <Node name="lab_2_zadanie" expanded="True">
+              <Node name="Buyer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.lab__2__zadanie PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
