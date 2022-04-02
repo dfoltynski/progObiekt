@@ -22,9 +22,7 @@ namespace lab_2_zadanie
 
         public virtual void Print()
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write($"        {Name} ");
-            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

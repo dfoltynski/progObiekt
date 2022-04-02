@@ -12,7 +12,6 @@ namespace lab_2_zadanie
         {
             Name = name;
             Weight = weight;
-
         }
 
         public double  Weight { get => weight; set => weight = value; }

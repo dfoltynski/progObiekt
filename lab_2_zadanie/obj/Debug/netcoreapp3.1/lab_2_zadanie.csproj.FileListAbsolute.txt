@@ -25,3 +25,17 @@ E:/GitHub/programowanieobiekotwe/lab_2_zadanie/lab_2_zadanie/obj/Debug/netcoreap
 /Users/dawid/Downloads/lab_2_zadanie/obj/Debug/netcoreapp3.1/lab_2_zadanie.dll
 /Users/dawid/Downloads/lab_2_zadanie/obj/Debug/netcoreapp3.1/lab_2_zadanie.pdb
 /Users/dawid/Downloads/lab_2_zadanie/obj/Debug/netcoreapp3.1/lab_2_zadanie.genruntimeconfig.cache
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.exe
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.deps.json
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.runtimeconfig.json
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.runtimeconfig.dev.json
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.dll
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\bin\Debug\netcoreapp3.1\lab_2_zadanie.pdb
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.csproj.AssemblyReference.cache
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.AssemblyInfoInputs.cache
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.AssemblyInfo.cs
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.csproj.CoreCompileInputs.cache
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.dll
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.pdb
+D:\Users\Dawid.Foltynski\progObiekt\lab_2_zadanie\obj\Debug\netcoreapp3.1\lab_2_zadanie.genruntimeconfig.cache

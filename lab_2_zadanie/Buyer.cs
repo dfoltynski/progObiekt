@@ -23,21 +23,15 @@ namespace lab_2_zadanie
         public void RemoweProduct(int index)
         {
             tasks.Remove(tasks[index]);
-
-
         }
 
         public override void Print()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("        Buyer: ");
-            Console.ForegroundColor = ConsoleColor.White;
             base.Print();
-            if (tasks.Count >0)
+            if (tasks.Count > 0)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("               -- Products: --");
-                Console.ForegroundColor = ConsoleColor.White;
                 foreach (Product product in tasks)
                 {
                     Console.Write("               ");
