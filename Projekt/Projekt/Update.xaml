@@ -1,16 +1,16 @@
-﻿<Window x:Class="Projekt.Insert"
+﻿<Window x:Class="Projekt.Update"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Insert" Height="357" Width="336">
-    <Grid Margin="0,0,0,-6">
-        <TextBlock HorizontalAlignment="Center" Margin="0,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-gb" Text="Dodaj"/></TextBlock>
+        Title="Update" Height="365" Width="350">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="143,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-gb" Text="Aktualizuj"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="40,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Imie:"/></TextBlock>
         <TextBox HorizontalAlignment="Left" Margin="156,114,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="19"/>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Height="57" Width="120" Click="Button_Click"/>
+        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="108,238,0,0" VerticalAlignment="Top" Height="57" Width="120" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="40,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Rola"/></TextBlock>
         <ComboBox HorizontalAlignment="Left" Margin="168,185,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="40,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Nazwisko"/></TextBlock>
