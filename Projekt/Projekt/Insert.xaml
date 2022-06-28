@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Insert" Height="450" Width="800">
-    <Grid>
-        
+        Title="Insert" Height="357" Width="336">
+    <Grid Margin="0,0,0,-6">
+        <TextBlock HorizontalAlignment="Center" Margin="0,39,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Imie:"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="156,114,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="19"/>
+        <Button Content="Dodaj" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Height="57" Width="120" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Rola"/></TextBlock>
+        <ComboBox HorizontalAlignment="Left" Margin="168,185,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"><Run Language="en-gb" Text="Nazwisko"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="156,155,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="19"/>
+
     </Grid>
 </Window>
