@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.30" />
+  </ItemGroup>
+
 </Project>
