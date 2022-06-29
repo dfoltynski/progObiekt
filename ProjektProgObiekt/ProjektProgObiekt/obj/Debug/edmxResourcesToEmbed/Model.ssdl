@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="agregatorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="companies">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_name" Type="nchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="employees">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="32" />
+    <Property Name="last_name" Type="nchar" MaxLength="64" />
+    <Property Name="role" Type="int" Nullable="false" />
+    <Property Name="company" Type="int" Nullable="false" />
+    <Property Name="manager" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="managers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="16" />
+    <Property Name="last_name" Type="nchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_name" Type="nchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_companies_companies">
+    <End Role="companies" Type="Self.companies" Multiplicity="1" />
+    <End Role="companies1" Type="Self.companies" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="companies">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="companies1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_employees_companies">
+    <End Role="companies" Type="Self.companies" Multiplicity="1" />
+    <End Role="employees" Type="Self.employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="companies">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employees">
+        <PropertyRef Name="company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_employees_managers">
+    <End Role="managers" Type="Self.managers" Multiplicity="1" />
+    <End Role="employees" Type="Self.employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="managers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employees">
+        <PropertyRef Name="manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_employees_roles1">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="employees" Type="Self.employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employees">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="agregatorModelStoreContainer">
+    <EntitySet Name="companies" EntityType="Self.companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employees" EntityType="Self.employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="managers" EntityType="Self.managers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roles" EntityType="Self.roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_companies_companies" Association="Self.FK_companies_companies">
+      <End Role="companies" EntitySet="companies" />
+      <End Role="companies1" EntitySet="companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_employees_companies" Association="Self.FK_employees_companies">
+      <End Role="companies" EntitySet="companies" />
+      <End Role="employees" EntitySet="employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_employees_managers" Association="Self.FK_employees_managers">
+      <End Role="managers" EntitySet="managers" />
+      <End Role="employees" EntitySet="employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_employees_roles1" Association="Self.FK_employees_roles1">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="employees" EntitySet="employees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

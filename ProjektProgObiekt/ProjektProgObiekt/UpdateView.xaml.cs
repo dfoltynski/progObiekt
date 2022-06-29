@@ -19,14 +19,23 @@ namespace ProjektProgObiekt
     /// </summary>
     public partial class UpdateView : Window
     {
-        public UpdateView()
+
+        AgregatorEntities _db = new AgregatorEntities();
+        int id;
+        public UpdateView(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            employee updateEmployee = (from em in _db.employees where em.id == id select em).Single();
 
+            _db.SaveChanges();
+
+            MainWindow.dataGrid.ItemsSource = _db.employees.ToList();
+            this.Hide();
         }
     }
 }

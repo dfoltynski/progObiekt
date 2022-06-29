@@ -18,7 +18,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22"><Run Text="Rola"/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="85,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Width="53" Height="22"/>
-        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="23" Margin="85,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="23" Margin="85,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Margin="51,243,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="64,28,0,0" TextWrapping="Wrap" Text="Dodaj pracownika" VerticalAlignment="Top"/>
         <ComboBox x:Name="companyComboBox" HorizontalAlignment="Left" Margin="85,176,0,0" VerticalAlignment="Top" Width="120">

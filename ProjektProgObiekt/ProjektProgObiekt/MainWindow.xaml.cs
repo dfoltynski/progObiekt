@@ -41,5 +41,23 @@ namespace ProjektProgObiekt
 
             Insert.ShowDialog();
         }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (myDataGrid.SelectedItem as employee).id;
+            UpdateView Update = new UpdateView(id);
+
+            Update.ShowDialog();
+        }
+
+        private void deleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (myDataGrid.SelectedItem as employee).id;
+            employee employeeToDelete = (from em in _db.employees where em.id == id select em).Single();
+            _db.employees.Remove(employeeToDelete);
+            _db.SaveChanges();
+            myDataGrid.ItemsSource = _db.employees.ToList();
+
+        }
     }
 }
