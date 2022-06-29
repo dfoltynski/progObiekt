@@ -21,7 +21,6 @@ namespace ProjektProgObiekt
     public partial class InsertView : Window
     {
         AgregatorEntities _db = new AgregatorEntities();
-
         public InsertView()
         {
             InitializeComponent();

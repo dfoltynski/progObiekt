@@ -11,7 +11,7 @@
 
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22"><Run Text="Rola"/><LineBreak/><Run/></TextBlock>
-        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="51,185,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
+        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="51,185,0,0" VerticalAlignment="Top" Width="121" Click="UpdateEmployee_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="33,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Aktualizuj "/><Run Text="role "/><Run Text="pracownika"/></TextBlock>
         <ComboBox x:Name="employeeComboBox" HorizontalAlignment="Left" Margin="85,49,0,0" VerticalAlignment="Top" Width="120">
 

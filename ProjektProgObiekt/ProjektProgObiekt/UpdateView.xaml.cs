@@ -28,14 +28,18 @@ namespace ProjektProgObiekt
             this.id = id;
             Load();
         }
-
+        /// <summary>
+        /// Metoda Load uruchamia wszystkie zawarte w niej metody odpowiedzialne za załadowanie roli, menadzerów i firm.
+        /// </summary>
         private void Load()
         {
             LoadRoles();
             LoadManagers();
             LoadCompanies();
         }
-
+        /// <summary>
+        /// Metoda LoadRoles wybiera wszystkie role z bazy danych, transferuje je na liste i za pomocą metody ForEach dynamicznie dodaje nowe wybory do ComboBox'a
+        /// </summary>
         private void LoadRoles()
         {
             _db.roles.ToList().ForEach(role =>
@@ -43,7 +47,9 @@ namespace ProjektProgObiekt
                 roleComboBox.Items.Add($"{role.role_name}");
             });
         }
-
+        /// <summary>
+        /// Metoda LoadManagers wybiera imię i nazwisko z bazy danych z tabeli managers, transferuje je na liste i za pomocą metody ForEach dynamicznie dodaje nowe wybory do ComboBox'a. W metodzie Add w ComboBox'ie dokonujemy konkatenacji dwóch stringów ze sobą i za pomocą klasy statycznej Regex podmieniamy niepotrzebne spacje, na tylko jedną.
+        /// </summary>
         private void LoadManagers()
         {
             _db.managers.ToList().ForEach(manager =>
@@ -51,7 +57,9 @@ namespace ProjektProgObiekt
                 managerComboBox.Items.Add($"{manager.name} {manager.last_name}");
             });
         }
-
+        /// <summary>
+        /// Metoda LoadCompanies wybiera wszystkie firmy z bazy danych, transferuje je na liste i za pomocą metody ForEach dynamicznie dodaje nowe wybory do ComboBox'a
+        /// </summary>
         private void LoadCompanies()
         {
             _db.companies.ToList().ForEach(company =>
@@ -60,8 +68,12 @@ namespace ProjektProgObiekt
             });
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Metoda UpdateEmployee_Click po kliknięciu aktualizuje użytkownika i odswieża dane jak Load w klasie MainWindow. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
         {
             employee updateEmployee = (from em in _db.employees where em.id == id select em).Single();
 
