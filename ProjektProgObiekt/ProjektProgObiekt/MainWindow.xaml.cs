@@ -80,12 +80,35 @@ namespace ProjektProgObiekt
         /// <param name="e"></param>
         private void deleteBtn_Click(object sender, RoutedEventArgs e)
         {
-            int id = (myDataGrid.SelectedItem as employee).id;
+            int id = (int)((Button)sender).Tag;
+
             employee employeeToDelete = (from em in _db.employees where em.id == id select em).Single();
             _db.employees.Remove(employeeToDelete);
             _db.SaveChanges();
-            myDataGrid.ItemsSource = _db.employees.ToList();
+            myDataGrid.ItemsSource = (from em in _db.employees
+                                      join r in _db.roles on em.role equals r.id
+                                      join c in _db.companies on em.company equals c.id
+                                      join m in _db.managers on em.manager equals m.id
+                                      select new
+                                      {
+                                          id = em.id,
+                                          name = em.name,
+                                          last_name = em.last_name,
+                                          role = r.role_name,
+                                          company = c.company_name,
+                                          manager = m.name + " " + m.last_name,
+                                      }).ToList();
 
         }
+    }
+
+    public class EmployeeGrid
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string last_name { get; set; }
+        public string role { get; set; }
+        public string company { get; set; }
+        public string manager { get; set; }
     }
 }
