@@ -68,11 +68,11 @@ namespace ProjektProgObiekt
 
 
         /// <summary>
-        /// Metoda Button_Click po kliknięciu deklaruje wartości, które będą używane do populacji kwerendy odpowiedzialnej za dodawanie użytkowników. Na końcu odswieżane są dane w taki sam sposób jak w Load w klasie MainWindow
+        /// Metoda addEmployee_Click po kliknięciu deklaruje wartości, które będą używane do populacji kwerendy odpowiedzialnej za dodawanie użytkowników. Na końcu odswieżane są dane w taki sam sposób jak w Load w klasie MainWindow
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void addEmployee_Click(object sender, RoutedEventArgs e)
         {
             string managerName = managerComboBox.Text.Trim().Split(' ')[0];
             string managerLastName = managerComboBox.Text.Trim().Split(' ')[1];
