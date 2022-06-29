@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="InsertView" Height="439.504" Width="225.364">
     <Grid Margin="0,0,2,-1">
-        <ComboBox HorizontalAlignment="Left" Margin="85,149,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="roleComboBox" HorizontalAlignment="Left" Margin="85,149,0,0" VerticalAlignment="Top" Width="120">
             <ComboBox.Items>
                 <ComboBoxItem>Admin</ComboBoxItem>
                 <ComboBoxItem>Edytor</ComboBoxItem>
@@ -16,11 +16,16 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top" Width="53" Height="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22"><Run Text="Rola"/><LineBreak/><Run/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="85,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Width="53" Height="22"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="51,209,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="23" Margin="85,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="51,243,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="64,28,0,0" TextWrapping="Wrap" Text="Dodaj pracownika" VerticalAlignment="Top"/>
+        <ComboBox x:Name="companyComboBox" HorizontalAlignment="Left" Margin="85,176,0,0" VerticalAlignment="Top" Width="120">
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22" Text="Firma"/>
+        <ComboBox x:Name="managerComboBox" HorizontalAlignment="Left" Margin="85,203,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22" Text="Menadzer"/>
 
     </Grid>
 </Window>

@@ -19,13 +19,30 @@ namespace ProjektProgObiekt
     /// </summary>
     public partial class InsertView : Window
     {
+        AgregatorEntities _db = new AgregatorEntities();
+
         public InsertView()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            employee newEmployee = new employee()
+            {
+                name = nameTextBox.Text,
+                last_name = lastNameTextBox.Text,
+                role = _db.roles.Find(roleComboBox.Text).id,
+                manager = _db.managers.Find(managerComboBox.Text).id,
+                company = _db.companies.Find(companyComboBox.Text).id,
+        };
+
+            _db.employees.Add(newEmployee);
+            _db.SaveChanges();
+            MainWindow.dataGrid.ItemsSource = _db.employees.ToList();
+
+            this.Hide();
+            
 
         }
     }

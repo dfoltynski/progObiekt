@@ -20,9 +20,26 @@ namespace ProjektProgObiekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        AgregatorEntities _db = new AgregatorEntities();
+        public static DataGrid dataGrid;
+
         public MainWindow()
         {
             InitializeComponent();
+            Load();
+        }
+
+        private void Load()
+        {
+            myDataGrid.ItemsSource = _db.employees.ToList();
+            dataGrid = myDataGrid;
+        }
+
+        private void insertBtn_Click(object sender, RoutedEventArgs e)
+        {
+            InsertView Insert = new InsertView();
+
+            Insert.ShowDialog();
         }
     }
 }
