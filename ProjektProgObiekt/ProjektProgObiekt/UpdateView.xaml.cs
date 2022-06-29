@@ -48,7 +48,7 @@ namespace ProjektProgObiekt
         {
             _db.managers.ToList().ForEach(manager =>
             {
-                managerComboBox.Items.Add($"{manager.name} o nazwisku {manager.last_name}");
+                managerComboBox.Items.Add($"{manager.name} {manager.last_name}");
             });
         }
 

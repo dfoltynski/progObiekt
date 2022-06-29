@@ -21,3 +21,4 @@ C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\Pro
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.csproj.CoreCompileInputs.cache
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.exe
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.pdb
+C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.csproj.AssemblyReference.cache

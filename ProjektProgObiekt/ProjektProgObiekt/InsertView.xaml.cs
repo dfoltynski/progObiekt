@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,12 +45,14 @@ namespace ProjektProgObiekt
 
         private void LoadManagers()
         {
+            string managerFullName;
             _db.managers.ToList().ForEach(manager =>
             {
-                managerComboBox.Items.Add($"{manager.name} o nazwisku {manager.last_name}");
+                managerComboBox.Items.Add(Regex.Replace($"{manager.name}{manager.last_name}", @"\s+", " "));
             });
-        }
 
+        }
+         
         private void LoadCompanies()
         {
             _db.companies.ToList().ForEach(company =>
@@ -62,13 +65,18 @@ namespace ProjektProgObiekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string managerName = managerComboBox.Text.Trim().Split(' ')[0];
+            string managerLastName = managerComboBox.Text.Trim().Split(' ')[1];
+            int managerId = _db.managers.Where(m => m.name == managerName && m.last_name == managerLastName).Single().id;
+            int companyId = _db.companies.Where(c => c.company_name == companyComboBox.Text.Trim()).Single().id;
+            int roleId = (from r in _db.roles where r.role_name == roleComboBox.Text.Trim() select r.id).Single();
             employee newEmployee = new employee()
             {
                 name = nameTextBox.Text,
                 last_name = lastNameTextBox.Text,
-                role = _db.roles.Find(roleComboBox.Text).id,
-                manager = _db.managers.Find(managerComboBox.Text).id,
-                company = _db.companies.Find(companyComboBox.Text).id,
+                role = roleId,
+                manager = managerId,
+                company = companyId,
             };
 
             _db.employees.Add(newEmployee);
