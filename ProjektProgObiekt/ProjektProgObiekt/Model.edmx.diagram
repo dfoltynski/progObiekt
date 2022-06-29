@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f58bd047ed624df1b011f2d9ed34b516" Name="Diagram1">
-        <EntityTypeShape EntityType="agregatorModel.company" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="agregatorModel.employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="agregatorModel.manager" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="agregatorModel.role" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="agregatorModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="agregatorModel.FK_companies_companies" ManuallyRouted="false" />
-        <AssociationConnector Association="agregatorModel.FK_employees_companies" ManuallyRouted="false" />
-        <AssociationConnector Association="agregatorModel.FK_employees_managers" ManuallyRouted="false" />
-        <AssociationConnector Association="agregatorModel.FK_employees_roles1" ManuallyRouted="false" />
+      <Diagram DiagramId="e1eae0b083c0474b8ecb7ef4de2861a3" Name="Diagram1">
+        <EntityTypeShape EntityType="AgregatorModel.company" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgregatorModel.employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgregatorModel.manager" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgregatorModel.role" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgregatorModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="AgregatorModel.FK_companies_companies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgregatorModel.FK_employees_companies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgregatorModel.FK_employees_managers" ManuallyRouted="false" />
+        <AssociationConnector Association="AgregatorModel.FK_employees_roles1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

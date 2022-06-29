@@ -19,7 +19,7 @@ namespace ProjektProgObiekt
         public string last_name { get; set; }
         public int role { get; set; }
         public int company { get; set; }
-        public int manager { get; set; }
+        public Nullable<int> manager { get; set; }
     
         public virtual company company1 { get; set; }
         public virtual manager manager1 { get; set; }

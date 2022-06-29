@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="agregatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="AgregatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="company">
     <Key>
       <PropertyRef Name="id" />
@@ -14,12 +14,12 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
     <Property Name="last_name" Type="String" MaxLength="64" FixedLength="true" Unicode="true" />
     <Property Name="role" Type="Int32" Nullable="false" />
     <Property Name="company" Type="Int32" Nullable="false" />
-    <Property Name="manager" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="manager" Type="Int32" />
     <NavigationProperty Name="company1" Relationship="Self.FK_employees_companies" FromRole="employees" ToRole="companies" />
     <NavigationProperty Name="manager1" Relationship="Self.FK_employees_managers" FromRole="employees" ToRole="managers" />
     <NavigationProperty Name="role1" Relationship="Self.FK_employees_roles1" FromRole="employees" ToRole="roles" />
@@ -76,7 +76,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_employees_managers">
-    <End Role="managers" Type="Self.manager" Multiplicity="1" />
+    <End Role="managers" Type="Self.manager" Multiplicity="0..1" />
     <End Role="employees" Type="Self.employee" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="managers">

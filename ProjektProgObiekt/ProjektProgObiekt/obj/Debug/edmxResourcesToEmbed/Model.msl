@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="agregatorModelStoreContainer" CdmEntityContainer="AgregatorEntities">
+  <EntityContainerMapping StorageEntityContainer="AgregatorModelStoreContainer" CdmEntityContainer="AgregatorEntities">
     <EntitySetMapping Name="companies">
-      <EntityTypeMapping TypeName="agregatorModel.company">
+      <EntityTypeMapping TypeName="AgregatorModel.company">
         <MappingFragment StoreEntitySet="companies">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_name" ColumnName="company_name" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="employees">
-      <EntityTypeMapping TypeName="agregatorModel.employee">
+      <EntityTypeMapping TypeName="AgregatorModel.employee">
         <MappingFragment StoreEntitySet="employees">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="managers">
-      <EntityTypeMapping TypeName="agregatorModel.manager">
+      <EntityTypeMapping TypeName="AgregatorModel.manager">
         <MappingFragment StoreEntitySet="managers">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -31,7 +31,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="roles">
-      <EntityTypeMapping TypeName="agregatorModel.role">
+      <EntityTypeMapping TypeName="AgregatorModel.role">
         <MappingFragment StoreEntitySet="roles">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="role_name" ColumnName="role_name" />
@@ -39,7 +39,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="agregatorModel.sysdiagram">
+      <EntityTypeMapping TypeName="AgregatorModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
