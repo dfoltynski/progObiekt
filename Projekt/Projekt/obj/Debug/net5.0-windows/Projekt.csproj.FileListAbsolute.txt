@@ -1,5 +1,0 @@
-C:\Users\ja\Desktop\progObiekt\Projekt\Projekt\obj\Debug\net5.0-windows\Projekt.csproj.AssemblyReference.cache
-C:\Users\ja\Desktop\progObiekt\Projekt\Projekt\obj\Debug\net5.0-windows\MainWindow.g.cs
-C:\Users\ja\Desktop\progObiekt\Projekt\Projekt\obj\Debug\net5.0-windows\App.g.cs
-C:\Users\ja\Desktop\progObiekt\Projekt\Projekt\obj\Debug\net5.0-windows\Projekt_MarkupCompile.cache
-C:\Users\ja\Desktop\progObiekt\Projekt\Projekt\obj\Debug\net5.0-windows\Projekt_MarkupCompile.lref
