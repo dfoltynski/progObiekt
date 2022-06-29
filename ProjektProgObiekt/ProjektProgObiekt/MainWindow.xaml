@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="900">
     <DockPanel>
+        <Button Content="Dodaj" x:Name="insertBtn" Height="38" VerticalAlignment="Top" Width="74" Click="insertBtn_Click"/>
+
         <DataGrid x:Name="myDataGrid" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding lastName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding last_name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Role" Binding="{Binding role}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Company" Binding="{Binding company}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Manager" Binding="{Binding manager}"></DataGridTextColumn>
@@ -25,7 +27,6 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button x:Name="insertBtn" Content="Dodaj" Click="insertBtn_Click" />
                                 <Button x:Name="updateBtn" Content="Aktualizuj" Click="updateBtn_Click" />
                                 <Button x:Name="deleteBtn" Content="Usuń" Click="deleteBtn_Click" />
                             </StackPanel>

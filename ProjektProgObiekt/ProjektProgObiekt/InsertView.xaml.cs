@@ -45,12 +45,10 @@ namespace ProjektProgObiekt
 
         private void LoadManagers()
         {
-            string managerFullName;
             _db.managers.ToList().ForEach(manager =>
             {
                 managerComboBox.Items.Add(Regex.Replace($"{manager.name}{manager.last_name}", @"\s+", " "));
             });
-
         }
          
         private void LoadCompanies()
@@ -81,7 +79,19 @@ namespace ProjektProgObiekt
 
             _db.employees.Add(newEmployee);
             _db.SaveChanges();
-            MainWindow.dataGrid.ItemsSource = _db.employees.ToList();
+            MainWindow.dataGrid.ItemsSource = (from em in _db.employees
+                                               join r in _db.roles on em.role equals r.id
+                                               join c in _db.companies on em.company equals c.id
+                                               join m in _db.managers on em.manager equals m.id
+                                               select new
+                                               {
+                                                   id = em.id,
+                                                   name = em.name,
+                                                   last_name = em.last_name,
+                                                   role = r.role_name,
+                                                   company = c.company_name,
+                                                   manager = m.name + " " + m.last_name,
+                                               }).ToList();
 
             this.Hide();
             
