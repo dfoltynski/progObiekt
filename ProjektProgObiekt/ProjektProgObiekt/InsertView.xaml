@@ -8,11 +8,7 @@
         Title="InsertView" Height="439.504" Width="225.364">
     <Grid Margin="0,0,2,-1">
         <ComboBox x:Name="roleComboBox" HorizontalAlignment="Left" Margin="85,149,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBox.Items>
-                <ComboBoxItem>Admin</ComboBoxItem>
-                <ComboBoxItem>Edytor</ComboBoxItem>
-                <ComboBoxItem>Oglądacz</ComboBoxItem>
-            </ComboBox.Items>
+
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top" Width="53" Height="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Height="22"><Run Text="Rola"/><LineBreak/><Run/></TextBlock>

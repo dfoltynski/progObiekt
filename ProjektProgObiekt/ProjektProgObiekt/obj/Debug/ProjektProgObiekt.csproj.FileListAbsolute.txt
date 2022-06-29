@@ -19,6 +19,5 @@ C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\Pro
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.Properties.Resources.resources
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.csproj.GenerateResource.cache
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.csproj.CoreCompileInputs.cache
-C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.csproj.CopyComplete
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.exe
 C:\Users\ja\Desktop\progObiekt\ProjektProgObiekt\ProjektProgObiekt\obj\Debug\ProjektProgObiekt.pdb

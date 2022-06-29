@@ -26,7 +26,40 @@ namespace ProjektProgObiekt
         {
             InitializeComponent();
             this.id = id;
+            Load();
         }
+
+        private void Load()
+        {
+            LoadRoles();
+            LoadManagers();
+            LoadCompanies();
+        }
+
+        private void LoadRoles()
+        {
+            _db.roles.ToList().ForEach(role =>
+            {
+                roleComboBox.Items.Add($"{role.role_name}");
+            });
+        }
+
+        private void LoadManagers()
+        {
+            _db.managers.ToList().ForEach(manager =>
+            {
+                managerComboBox.Items.Add($"{manager.name} o nazwisku {manager.last_name}");
+            });
+        }
+
+        private void LoadCompanies()
+        {
+            _db.companies.ToList().ForEach(company =>
+            {
+                companyComboBox.Items.Add($"{company.company_name}");
+            });
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -24,7 +24,41 @@ namespace ProjektProgObiekt
         public InsertView()
         {
             InitializeComponent();
+            Load();
         }
+
+        private void Load()
+        {
+            LoadRoles();
+            LoadManagers();
+            LoadCompanies();
+        }
+
+        private void LoadRoles()
+        {
+            _db.roles.ToList().ForEach(role =>
+            {
+                roleComboBox.Items.Add($"{role.role_name}");
+            });
+        }
+
+        private void LoadManagers()
+        {
+            _db.managers.ToList().ForEach(manager =>
+            {
+                managerComboBox.Items.Add($"{manager.name} o nazwisku {manager.last_name}");
+            });
+        }
+
+        private void LoadCompanies()
+        {
+            _db.companies.ToList().ForEach(company =>
+            {
+                companyComboBox.Items.Add($"{company.company_name}");
+            });
+        }
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -35,7 +69,7 @@ namespace ProjektProgObiekt
                 role = _db.roles.Find(roleComboBox.Text).id,
                 manager = _db.managers.Find(managerComboBox.Text).id,
                 company = _db.companies.Find(companyComboBox.Text).id,
-        };
+            };
 
             _db.employees.Add(newEmployee);
             _db.SaveChanges();
@@ -43,7 +77,6 @@ namespace ProjektProgObiekt
 
             this.Hide();
             
-
         }
     }
 }
