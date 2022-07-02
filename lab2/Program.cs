@@ -8,6 +8,7 @@ namespace lab2
         {
             Teacher treacher = new Teacher("Maria Skłodowska", 50);
 
+
             Student student1 = new Student("Jan Kowaslski", 21, "LAB-01");
             Student student2 = new Student("Jan Kowaslski", 21, "LAB-01");
             Student student3 = new Student("Jaś Fasola", 23, "LAB-02");
