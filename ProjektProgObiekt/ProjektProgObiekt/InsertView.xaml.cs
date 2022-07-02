@@ -23,6 +23,7 @@ namespace ProjektProgObiekt
         AgregatorEntities _db = new AgregatorEntities();
         public InsertView()
         {
+
             InitializeComponent();
             Load();
         }
